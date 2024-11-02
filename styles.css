@@ -23,19 +23,19 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
-div.background {
+.background {
   background: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) repeat;
   border: 2px solid black;
 }
 
-div.transbox {
+transbox {
   margin: 30px;
   background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.6;
 }
 
-div.transbox p {
+transbox p {
   margin: 5%;
   font-weight: bold;
   color: #000000;
