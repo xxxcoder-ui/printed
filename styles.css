@@ -48,7 +48,7 @@ input[type=text] {
   border: none;
   background-color: #3CBC8D;
   background: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) ;
-  background-width : '100%';
-  background-height : '50%';
+  background-width : '80%';
+  background-height : '100%';
   color: white;
 }
