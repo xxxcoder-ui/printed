@@ -19,7 +19,16 @@
 		background-image : url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) ;height: 250px;width: 250px;
 	}
 </style>
-<input class="result_btn" type="button" onclick="printDiv('content_area')" value="🖨️ Presentations" />
+<div class="background">
+  <div class="transbox">
+    <p>Interactive Simple.</p>
+<form>
+  <label for="fname">Name</label>
+  <input type="text" id="fname" name="fname" value="Gift Card">
+  <label for="lname">Names</label>
+  <input type="text" id="lname" name="lname" value="Halloween">
+</form>
+	  <input class="result_btn" type="button" onclick="printDiv('content_area')" value="🖨️ Presentations" />
 </div>
 <script>
 	function printDiv(content_area) {
@@ -30,16 +39,6 @@
   // document.body.innerHTML = originalContents;
 	}
 </script>
-
-<div class="background">
-  <div class="transbox">
-    <p>Interactive Simple.</p>
-<form>
-  <label for="fname">Name</label>
-  <input type="text" id="fname" name="fname" value="Gift Card">
-  <label for="lname">Names</label>
-  <input type="text" id="lname" name="lname" value="Halloween">
-</form>
 </div>
 </div>
 </body>
