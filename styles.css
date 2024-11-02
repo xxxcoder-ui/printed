@@ -29,14 +29,14 @@ background {
 }
 
 transbox {
-  margin: 30px;
+  margin: 130px;
   background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.6;
 }
 
 transbox p {
-  margin: 5%;
+  margin: 15%;
   font-weight: bold;
   color: #000000;
 }
