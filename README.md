@@ -1,6 +1,6 @@
 # printed
 Printed Source Simple Interactive
 
-[Add Style With]
-link rel="stylesheet"
+| Add Style With |
+*link rel="stylesheet*
     
