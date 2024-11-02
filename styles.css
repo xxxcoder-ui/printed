@@ -23,8 +23,8 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
-body {
-  background-image: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) repeat;
+background {
+  background-image: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg);
   border: 2px solid black;
 }
 
@@ -47,5 +47,6 @@ input[type=text] {
   box-sizing: border-box;
   border: none;
   background-color: #3CBC8D;
+  background: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) ;
   color: white;
 }
