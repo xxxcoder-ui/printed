@@ -23,8 +23,8 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
-.background {
-  background: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) repeat;
+body {
+  background-image: url(https://raw.githubusercontent.com/xxxcoder-ui/printed/refs/heads/main/gift.jpg) repeat;
   border: 2px solid black;
 }
 
