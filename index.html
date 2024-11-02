@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+div.background {
+  background: url(gift.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a class="active" href="#home">𝙿𝚁𝙸𝙽𝚃𝙴𝙳</a></li>
+  <li><a href="#news">𝚂𝙾𝚄𝚁𝙲𝙴</a></li>
+  <li><a href="#contact">𝚂𝙸𝙼𝙿𝙻𝙴</a></li>
+  <li><a href="#about">𝙸𝙽𝚃𝙴𝚁𝙰𝙲𝚃𝙸𝚅𝙴</a></li>
+</ul>
+
+<input class="result_btn" type="button" onclick="printDiv('content_area')" value="🖨️ Presentations" />
+</div>
+<script>
+	function printDiv(content_area) {
+  // let printContents = document.querySelector('.result').innerHTML;
+  // let originalContents = document.body.innerHTML;
+  // document.body.innerHTML = printContents;
+  window.print();
+  // document.body.innerHTML = originalContents;
+	}
+</script>
+
+<div class="background">
+  <div class="transbox">
+    <p>This is some text that is placed in the transparent box.</p>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" value="Gift Card">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="Halloween">
+</form>
+</div>
+</div>
+</body>
+</html>
