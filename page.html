@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=100%, initial-scale=0, shrink-to-fit=yes">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<ul>
+  <li><a class="active" href="#home">🍓𝐏𝐑𝐈𝐍𝐓𝐄𝐃🍓</a></li>
+  <li><a href="#news">🍅𝐒𝐎𝐔𝐑𝐂𝐄🍅</a></li>
+  <li><a href="#contact">🌶️𝐒𝐈𝐌𝐏𝐋𝐄🌶️</a></li>
+  <li><a href="#about">🍈𝐈𝐍𝐓𝐄𝐑𝐀𝐂𝐓𝐈𝐕𝐄🍈</a></li>
+</ul>
+<body>
+<!-- page one -->
+	<div class="container">
+        <h1>
+            <div class="toggle-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle-mode" />
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <a class="tittle" onclick="location.reload();">📲</a>
+            <img id="historybutton" src="*">	
+        </h1>
+        <div class="calculator">
+            <input type="text" name="screen" id="answer" readonly>
+            <table>
+                <tr>
+                    <td><button>(</button></td>
+                    <td><button>)</button></td>
+                    <td>
+                        <div class="row">
+                            <div class="col">
+                                <button onclick="clearAll()">C</button>
+                            </div>
+                            <div class="col">
+                                <button onclick="deleteLastEntry()">CE</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td><button>%</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button style="font-weight: bold;">.</button></td>
+                    <td><button>/</button></td>
+                    <td><button style="background-color: #25db72; font-weight: bold; color: #ecf0f1;">=</button></td>
+                </tr>
+            </table>
+            <hr style="max-width: 100vw;">
+            <div style="font-size:10rem; display: flex; align-items: center; justify-content: center;">
+            </div>
+        </div>
+	</div>
+    <div id="bar1" class = "bars"></div>
+    <div id="bar2" class = "bars"></div>
+    <div id="history"></div>
+    <div id="turn">
+        #️⃣
+    </div>
+<script src="hist.js"></script>
+<script src="calc.js"></script>
+
+<script>
+	const toggleMode = document.getElementById('toggle-mode');
+	const container = document.querySelector('.container');
+
+	toggleMode.addEventListener('change', function() {
+		container.classList.toggle('dark-mode');
+	});
+
+    document.addEventListener('keydown', function (event) {
+        handleKeyPress(event.key);
+    });
+
+    // This function will be responsible for handling the button press from the keyboard..Try thses key also if want you can also chnage these settings,...
+    function handleKeyPress(key) {
+    //  "Enter" key is pressed, trigger the "=" button press
+        if (key === 'Enter') {
+            handleButtonPress('=');
+        }
+        // "Delete" or "Backspace" key is pressed, trigger the "CE" button press
+        if (key === 'Delete' || key === 'Backspace') {
+            handleButtonPress('CE');
+        }
+        //number key is pressed, trigger the corresponding number button press
+        if (/[0-9]/.test(key)) {
+            handleButtonPress(key);
+        }
+        //  operator key is pressed (+, -, *, /), trigger the corresponding operator button press
+        if (/[\+\-\*\/%]/.test(key)) {
+            handleButtonPress(key);
+        }
+    }
+    function handleButtonPress(value) {
+        // This function simulates the button press of the calculator for the given value
+        // Find the corresponding button element based on the value
+        const button = document.querySelector(`button[value="${value}"]`);
+        if (button) {
+            button.click();
+        }
+    }
+</script>
+	
+	<form>
+  <label for="fname">1️⃣</label>
+  <input type="text" id="fname" name="fname" value="..........">
+  <label for="lname">2️⃣</label>
+  <input type="text" id="lname" name="lname" value="..........">
+  <label for="fname">3️⃣</label>
+  <input type="text" id="fname" name="fname" value="..........">
+  <label for="lname">4️⃣</label>
+  <input type="text" id="lname" name="lname" value="..........">
+  <label for="lname">5️⃣</label>
+  <input type="text" id="lname" name="lname" value="..........">
+  <label for="fname">6️⃣</label><br>
+  <input type="text" id="fname" name="fname" value="..........">
+  <label for="lname">7️⃣</label>
+  <input type="text" id="lname" name="lname" value="..........">
+  <label for="fname">8️⃣</label>
+  <input type="text" id="fname" name="fname" value="..........">
+  <label for="lname">9️⃣</label>
+  <input type="text" id="lname" name="lname" value="..........">
+  <label for="lname">🔟</label>
+  <input type="text" id="lname" name="lname" value="..........">
+</form>
+</form>
+	<p>🖨️</p>
+	  <input class="result_btn" type="button" onclick="printDiv('content_area')" value="🖨️𝙿𝚛𝚒𝚗𝚝 𝙿𝚛𝚎𝚜𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜🖨️" />
+</div>
+<script>
+	function printDiv(all) {
+  // let printContents = document.querySelector('.result').innerHTML;
+  // let originalContents = document.body.innerHTML;
+  // document.body.innerHTML = printContents;
+  window.print(all);
+  // document.body.innerHTML = originalContents;
+	}
+</script>
+
+	<!-- page one end -->
+	
+	
+</body>
+</html>
